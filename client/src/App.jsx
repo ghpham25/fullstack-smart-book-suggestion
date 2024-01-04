@@ -10,13 +10,12 @@ function App() {
   return (
     <>
     <Header/>
-    <Home> </Home>
-    {/* <Router>
+    <Router>
       <Routes>
         <Route path="/" exact element={<Home/>} />
         <Route path="/recommended" element={<RecommendBookList/>} />
       </Routes>
-    </Router> */}
+    </Router>
     </>
   )
 }

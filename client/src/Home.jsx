@@ -8,18 +8,17 @@ export default function Home() {
   const [similarBook1, setSimilar1] = useState("");
   const [similarBook2, setSimilar2] = useState("");
   const [similarBook3, setSimilar3] = useState("");
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
-    const navigate = useNavigate()
     e.preventDefault();
     try {
       const response = await axios.post(
         "http://localhost:3000/api/submit-book-preferences",
         { bookMoods: bookMoods, similarBooks: similarBook1 + ", " + similarBook2 + ", " + similarBook3 }
       );
-      // const recommendedBooks = response.data;
       console.log(response.data)
-      // navigate.push("/recommended", {responses: recommendedBooks})
+      navigate("/recommended", {state:{responses: response.data}})
     } catch (error) {
       console.error("Error submitting data:", error);
     }
