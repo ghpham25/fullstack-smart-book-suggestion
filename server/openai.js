@@ -14,11 +14,10 @@ async function generateBooks(bookMoods, similarBooks) {
       messages: [
         {
           role: "user",
-          content:
-            "What are five books (plus author and short descriptions) that has the moods " +
-            bookMoods +
-            " and are similar to the books " +
-            similarBooks,
+          content: `What are five books (plus author and short descriptions) that has the moods
+            ${bookMoods} and are similar to the books ${similarBooks}, format the answers as 5 
+            small paragraphs, each paragraphs has the format: 
+            <Number>. <Title> by <Author>: <Description>`,
         },
       ],
       temperature: 1,
@@ -37,6 +36,5 @@ async function generateBooks(bookMoods, similarBooks) {
 }
 
 module.exports = {
-    generateBooks,
-  };
-  
+  generateBooks,
+};

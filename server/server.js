@@ -47,6 +47,19 @@ app.post("/api/add-to-reading-list", async(req, res) => {
     }
 })
 
+app.get("/api/get-reading-list", async(req, res) => {
+    try {
+        const readListDb = client.db("readList")
+        const readListCol = readListDb.collection("readListCol")
+        const readListCursor = await readListCol.find()
+        const readList = await readListCursor.toArray()
+        console.log(readList)
+        res.json({readList})
+    } catch (error) {
+        res.json({ error: "Error getting read list from database" });
+    }
+})
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
