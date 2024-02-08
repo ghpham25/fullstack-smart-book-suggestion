@@ -15,6 +15,10 @@ Build a book recommendation system that generates book recommendations for users
 React.js, CSS, HTML, MongoDB, JavaScript 
 
 ## Video Walkthrough
+![](https://github.com/fullstack-smart-book-suggestion/booksuggest.gif)
+
+GIF created with KAP 
+
 
 
 
