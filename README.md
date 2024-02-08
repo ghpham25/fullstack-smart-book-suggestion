@@ -16,7 +16,7 @@ React.js, CSS, HTML, MongoDB, JavaScript
 
 ## Video Walkthrough
 
-![](https://github.com/ghpham25/Breadcrumbsfullstack-smart-book-suggestion/blob/main/booksuggest.gif)
+![](https://github.com/ghpham25/fullstack-smart-book-suggestion/blob/main/booksuggest.gif)
 
 GIF created with KAP 
 
